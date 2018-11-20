@@ -43,7 +43,7 @@ class LoginTest(myunit.MyTest):
 
     def test_login5(self):
         # 用户名、密码正确
-        self.user_login_verify(username="caiwen314@gmail.com" , password="145536caiwen")
+        self.user_login_verify(username="caiwen@globalegrow.com" , password="admin123")
         sleep(3)
         po = Login(self.driver)
         self.assertEqual(po.login_user_success(), u'adtest')
