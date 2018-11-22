@@ -1,0 +1,7 @@
+2018-05-05 Saturday 23:27:36 INFO BaiduIndex : in_this_page : 进入百度首页
+2018-05-05 Saturday 23:27:38 INFO BaiduIndex : seach_content : 清空输入栏
+2018-05-05 Saturday 23:27:38 INFO BaiduIndex : seach_content : 输入要搜索的内容:csdn
+2018-05-05 Saturday 23:27:39 INFO BaiduIndex : seach_content : 提交搜索
+2018-05-05 Saturday 23:27:40 INFO BaiduContent : into_search_result : 点击第1页第1条内容
+2018-05-05 Saturday 23:27:40 INFO CsdnIndex : link_to_login : 前往登陆页
+2018-05-05 Saturday 23:27:42 INFO CsdnLogin : use_userpwd_login : 选择账号密码登录方式

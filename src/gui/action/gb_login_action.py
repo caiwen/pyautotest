@@ -1,6 +1,6 @@
-'''
+"""
 GB 登录的相关操作
-'''
+"""
 from .base_action import BaseAction
 from ..page.gb_login_page import GbLoginPage
 
