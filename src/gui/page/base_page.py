@@ -1,5 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from src.util import constants
 
 
 class BasePage(object):
@@ -11,8 +12,8 @@ class BasePage(object):
     # 实例化BasePage类时，最先执行的就是__init__方法，该方法的入参，其实就是BasePage类的入参。
     # __init__方法不能有返回值，只能返回None
     # self只实例本身，相较于类Page而言。
-    def __init__(self, selenium_driver, base_url, page_title):
-        self.driver = selenium_driver
+    def __init__(self, base_url, page_title):
+        self.driver = constants.get_value('my_driver')
         self.base_url = base_url
         self.page_title = page_title
 

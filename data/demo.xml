@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application>
+    <version>1.0.1</version>
+    <author>lina</author>
+    <page name="csdn_login">
+        <username>caiwen@globalegrow.com</username>
+        <password>admin123</password>
+    </page>
+</application>
