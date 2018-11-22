@@ -21,8 +21,8 @@ class GbLoginPage(BasePage):
     url = "https://login.gearbest.com/m-users-a-sign.htm?type=1"
     title = "Sign In | GearBest.com"
 
-    def __init__(self):
-        BasePage.__init__(self, self.url, self.title)
+    def __init__(self,selenium_driver):
+        BasePage.__init__(self, selenium_driver, self.url, self.title)
         self.driver.implicitly_wait(5)
         self.driver.maximize_window()
 

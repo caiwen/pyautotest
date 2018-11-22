@@ -6,9 +6,9 @@ from ..page.gb_login_page import GbLoginPage
 
 
 class GbLoginAction(BaseAction):
-    def __init__(self):
+    def __init__(self, selenium_driver):
         super().__init__()
-        self.gb_login_pg = GbLoginPage()
+        self.gb_login_pg = GbLoginPage(selenium_driver)
 
     # 测试用户登录
     def user_login_verify(self, username="", password=""):

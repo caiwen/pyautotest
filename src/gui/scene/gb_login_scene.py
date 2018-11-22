@@ -10,7 +10,7 @@ from src.gui.action import gb_login_action
 class GbLoginScene(BaseScene):
     def __init__(self):
         super().__init__()
-        self.gb_login_action = gb_login_action.GbLoginAction()
+        self.gb_login_action = gb_login_action.GbLoginAction(self.driver)
 
     def test_login(self):
         self.gb_login_action.do_login()
