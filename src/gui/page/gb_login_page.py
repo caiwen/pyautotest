@@ -47,7 +47,6 @@ class GbLoginPage(BasePage):
         self.login_username(username)
         self.login_password(password)
         self.login_button()
-        self.driver.implicitly_wait(10)
 
     # 登录错误提示信息
     def login_error_hint(self):

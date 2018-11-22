@@ -19,6 +19,7 @@ class BasePage(object):
         self.base_url = base_url
         self.page_title = page_title
 
+
     # 通过title断言进入的页面是否正确。
     # 使用title获取当前窗口title，检查输入的title是否在当前title中，返回比较结果（True 或 False）
     def on_page(self, page_title):
