@@ -1,3 +1,6 @@
+"""
+工具类，获取配置信息
+"""
 import configparser
 
 

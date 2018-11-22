@@ -1,6 +1,6 @@
-'''
-GB 登录页面
-'''
+"""
+gearbest 的登录操作页面
+"""
 from selenium.webdriver.common.by import By
 from src.gui.page.base_page import BasePage
 

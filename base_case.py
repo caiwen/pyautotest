@@ -1,3 +1,6 @@
+"""
+测试用例的基类
+"""
 import unittest
 from bootstrap.bootstrap import Bootstrap
 from src.util import constants

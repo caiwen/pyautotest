@@ -1,4 +1,6 @@
-from src.util import constants
+"""
+场景基类，一个场景会有多个动作
+"""
 
 
 class BaseScene(object):

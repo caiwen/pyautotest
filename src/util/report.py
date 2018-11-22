@@ -1,18 +1,10 @@
-#!/usr/bin/env python3 
-# -*- coding: UTF-8 -*-
-
-'''
+"""
 测试报告输出
-by lina
-'''
+"""
 import xlrd
-import os
-import time
 import datetime
 from xlutils.copy import copy
-from xlwt import Style
 from src.util import constants
-from src.util import report
 
 
 class Report:
@@ -25,9 +17,7 @@ class Report:
     """
     保存截图
     story:用户故事 action:操作 des:描述
-    by lina
     """
-
     def add_excel_report(self, story, action, des):
         now_time = datetime.datetime.now()
         rexcel = xlrd.open_workbook(self.output_file, formatting_info=True)

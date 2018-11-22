@@ -1,3 +1,6 @@
+"""
+工具类获取测试数据
+"""
 import xml.dom.minidom
 from src.util import config
 
