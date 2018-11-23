@@ -29,7 +29,6 @@ class Log:
     """
     写入日志
     func:运行的方法 des:中文描述
-    by lina
     """
 
     def add_log(self, page, func, des):

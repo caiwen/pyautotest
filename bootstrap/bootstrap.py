@@ -32,6 +32,10 @@ class Bootstrap:
         constants.set_value('excel_report_folder', excel_report_folder)
         constants.set_value('excel_report_file', excel_report_file)
 
+        # html文件存放路径
+        html_report_path = conf.get_config('system', 'html_report_path')
+        constants.set_value('html_report_path', html_report_path)
+
         # 创建导出excel报告的文件夹
         if not os.path.exists(excel_report_folder):
             os.makedirs(excel_report_folder)

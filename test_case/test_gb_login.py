@@ -1,4 +1,4 @@
-from base_case import BaseCase
+from test_base import BaseCase
 from src.gui.action.gb_login_action import GbLoginAction
 from src.gui.scene.gb_login_scene import GbLoginScene
 import unittest
