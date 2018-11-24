@@ -1,4 +1,4 @@
-from test_base import BaseCase
+from test_case.test_base import BaseCase
 from src.gui.action.gb_login_action import GbLoginAction
 from src.gui.scene.gb_login_scene import GbLoginScene
 import unittest
@@ -7,12 +7,14 @@ import unittest
 class GbLoginCase(BaseCase):
 
     # 测试正常登录动作
-    def test_login1_action(self):
-        GbLoginAction(self.driver).do_login()
+    def test_login_success_action(self):
+        login_action = GbLoginAction(self.driver)
+        login_action.do_login()
+        self.assertTrue(login_action.login_success())
 
     # 测试密码错误
-    def test_login2_action(self):
-        GbLoginAction(self.driver).user_login_verify(username ='caiwen@globalegrow.com', password ='adminaaaa')
+    def test_login_pwd_err_action(self):
+        GbLoginAction(self.driver).user_login_verify(username='caiwen@globalegrow.com', password='adminaaaa')
 
     # 测试密码没填
     def test_login3_action(self):

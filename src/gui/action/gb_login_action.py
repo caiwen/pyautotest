@@ -13,8 +13,11 @@ class GbLoginAction(BaseAction):
         login_page.open()
         # 登录页面截屏
         self.mscreenshot.add_screenshot(self.driver, 'gb_login_page(1)')
+        self.mlog.add_log('GbLoginPage', 'user_login_verify', '打开登录页面')
         login_page.login_username(username)
+        self.mlog.add_log('GbLoginPage', 'user_login_verify', '输入邮箱')
         login_page.login_password(password)
+        self.mlog.add_log('GbLoginPage', 'user_login_verify', '输入密码')
         # 输入之后截屏
         self.mscreenshot.add_screenshot(self.driver, 'gb_login_input(2)')
         login_page.login_button()
@@ -29,3 +32,8 @@ class GbLoginAction(BaseAction):
         self.user_login_verify(username, password)
         self.delay_time(3)
         self.mscreenshot.add_screenshot(self.driver, 'gb_login_success(4)')
+
+    def login_success(self):
+        if self.get_cookie_named('gb_userinfo') is None:
+            return False
+        return True

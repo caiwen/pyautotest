@@ -1,6 +1,7 @@
 from src.util import data
 import time
 from src.util import screenshot
+from src.util import log
 
 
 class BaseAction(object):
@@ -8,6 +9,13 @@ class BaseAction(object):
             self.demo_data = data.Data('', 'demo.xml')
             self.driver = selenium_driver
             self.mscreenshot = screenshot.Screenshot()
+            self.mlog = log.Log()
 
         def delay_time(self, sec):
             time.sleep(sec)
+
+        def get_cookies(self):
+            return self.driver.get_cookies()
+
+        def get_cookie_named(self, name):
+            return self.driver.get_cookie(name)

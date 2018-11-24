@@ -17,6 +17,8 @@ class GbLoginPage(BasePage):
     login_error_loc = (By.CLASS_NAME, "form_msg")
     # 登录成功用户名信息
     login_user_success_loc = (By.CLASS_NAME, 'siteHeader_userAccountLink')
+    # 服务器返回错误位置
+    login_response_err_loc = (By.CLASS_NAME, "layui-layer-content")
     # 登录页面
     url = "https://login.gearbest.com/m-users-a-sign.htm?type=1"
     title = "Sign In | GearBest.com"
@@ -51,6 +53,10 @@ class GbLoginPage(BasePage):
     # 登录错误提示信息
     def login_error_hint(self):
         return self.find_element(self.login_error_loc).text
+
+    # 弹框提示错误
+    def login_response_err_hint(self):
+        return self.find_element(self.login_response_err_loc).text
 
     # 登录成功用户名信息
     def login_user_success(self):

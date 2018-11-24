@@ -240,7 +240,7 @@ table       { font-size: 100%; }
                         sliced: true,
                         selected: true
                     },
-                    ['错误', 0]
+                    ['错误', 6]
                 ]
             }]
         }, function(c) {
@@ -374,12 +374,12 @@ function html_escape(s) {
 <div class='heading'>
 <div style="width: 650px; float: left;">
     <h1 style="font-family: Microsoft YaHei">自动化测试报告</h1>
-    <p class='attribute'><strong>测试人员 : </strong> caiwen</p>
-<p class='attribute'><strong>开始时间 : </strong> 2018-11-23 14:32:52</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 0，通过率 = 0.00 %</p>
+    <p class='attribute'><strong>测试人员 : </strong> 蔡文</p>
+<p class='attribute'><strong>开始时间 : </strong> 2018-11-23 18:56:45</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:03:27.444000</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 6，错误 6，通过率 = 0.00%</p>
 <p class='attribute'><strong>失败用例合集 : </strong> <ol style='float: left;'>无</ol></p>
-<p class='attribute'><strong>错误用例合集 : </strong> <ol style='float: left;'>无</ol></p>
+<p class='attribute'><strong>错误用例合集 : </strong> <div class='panel-default' style='float: left;'><a class='showDetail' data-toggle='collapse' href='#errorCaseOl' style='text-decoration: none;'>点击查看</a></div><ol id='errorCaseOl' class='collapse' style='float: left;'><li>test_login1_action (test_gb_login.GbLoginCase)</li><li>test_login2_action (test_gb_login.GbLoginCase)</li><li>test_login3_action (test_gb_login.GbLoginCase)</li><li>test_login4_action (test_gb_login.GbLoginCase)</li><li>test_login5_action (test_gb_login.GbLoginCase)</li><li>test_login_scene (test_gb_login.GbLoginCase)</li></ol></p>
 
     <p class='description'>测试报告</p>
 </div>
@@ -390,11 +390,11 @@ function html_escape(s) {
 
 <div style="width: 500px; clear: both;">
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00 % }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00% }</a>
 <a class="btn btn-success" href='javascript:showCase(2)'>通过{ 0 }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-warning" href='javascript:showCase(3)'>错误{ 0 }</a>
-<a class="btn btn-info" href='javascript:showCase(4)'>所有{ 0 }</a>
+<a class="btn btn-warning" href='javascript:showCase(3)'>错误{ 6 }</a>
+<a class="btn btn-info" href='javascript:showCase(4)'>所有{ 6 }</a>
 </p>
 </div>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -419,14 +419,211 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
+<tr class='errorClass warning'>
+    <td>GbLoginCase</td>
+    <td></td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">6</td>
+    <td class="text-center">207.44秒</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',6)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+    <tr id='et1_1' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>test_login1_action</div></td>
+        <td style="vertical-align: middle"></td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_1' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_1'>错误</button>
+        <div id='div_et1_1' class="collapse">  -->
+
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_1' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_1'>错误</button>
+        <div id='div_et1_1' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_1: &lt;src.gui.page.gb_login_page.GbLoginPage object at 0x02F01A10&gt; 页面中未能找到 ('class name', 'siteHeader_userAccountLink') 元素
+Traceback (most recent call last):
+  File "E:\code\python\pyautotest\test_case\test_gb_login.py", line 12, in test_login1_action
+    self.assertTrue(GbLoginAction(self.driver).do_login())
+  File "E:\code\python\pyautotest\src\gui\action\gb_login_action.py", line 31, in do_login
+    self.user_login_verify(username, password)
+  File "E:\code\python\pyautotest\src\gui\action\gb_login_action.py", line 25, in user_login_verify
+    return login_page.login_user_success()
+  File "E:\code\python\pyautotest\src\gui\page\gb_login_page.py", line 57, in login_user_success
+    username = self.find_element(*self.login_user_success_loc).text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+    <tr id='et1_2' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>test_login2_action</div></td>
+        <td style="vertical-align: middle"></td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_2' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_2'>错误</button>
+        <div id='div_et1_2' class="collapse">  -->
+
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_2' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_2'>错误</button>
+        <div id='div_et1_2' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_2: &lt;src.gui.page.gb_login_page.GbLoginPage object at 0x02F7C0B0&gt; 页面中未能找到 ('class name', 'siteHeader_userAccountLink') 元素
+Traceback (most recent call last):
+  File "E:\code\python\pyautotest\test_case\test_gb_login.py", line 19, in test_login2_action
+    GbLoginAction(self.driver).user_login_verify(username ='caiwen@globalegrow.com', password ='adminaaaa')
+  File "E:\code\python\pyautotest\src\gui\action\gb_login_action.py", line 25, in user_login_verify
+    return login_page.login_user_success()
+  File "E:\code\python\pyautotest\src\gui\page\gb_login_page.py", line 57, in login_user_success
+    username = self.find_element(*self.login_user_success_loc).text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+    <tr id='et1_3' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>test_login3_action</div></td>
+        <td style="vertical-align: middle"></td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_3' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_3'>错误</button>
+        <div id='div_et1_3' class="collapse">  -->
+
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_3' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_3'>错误</button>
+        <div id='div_et1_3' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_3: &lt;src.gui.page.gb_login_page.GbLoginPage object at 0x02F7C7F0&gt; 页面中未能找到 ('class name', 'siteHeader_userAccountLink') 元素
+Traceback (most recent call last):
+  File "E:\code\python\pyautotest\test_case\test_gb_login.py", line 23, in test_login3_action
+    GbLoginAction(self.driver).user_login_verify(username='caiwen@globalegrow.com')
+  File "E:\code\python\pyautotest\src\gui\action\gb_login_action.py", line 25, in user_login_verify
+    return login_page.login_user_success()
+  File "E:\code\python\pyautotest\src\gui\page\gb_login_page.py", line 57, in login_user_success
+    username = self.find_element(*self.login_user_success_loc).text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+    <tr id='et1_4' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>test_login4_action</div></td>
+        <td style="vertical-align: middle"></td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_4' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_4'>错误</button>
+        <div id='div_et1_4' class="collapse">  -->
+
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_4' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_4'>错误</button>
+        <div id='div_et1_4' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_4: &lt;src.gui.page.gb_login_page.GbLoginPage object at 0x02F74E30&gt; 页面中未能找到 ('class name', 'siteHeader_userAccountLink') 元素
+Traceback (most recent call last):
+  File "E:\code\python\pyautotest\test_case\test_gb_login.py", line 27, in test_login4_action
+    GbLoginAction(self.driver).user_login_verify(password='caiwen@globalegrow.com')
+  File "E:\code\python\pyautotest\src\gui\action\gb_login_action.py", line 25, in user_login_verify
+    return login_page.login_user_success()
+  File "E:\code\python\pyautotest\src\gui\page\gb_login_page.py", line 57, in login_user_success
+    username = self.find_element(*self.login_user_success_loc).text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+    <tr id='et1_5' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>test_login5_action</div></td>
+        <td style="vertical-align: middle"></td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_5' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_5'>错误</button>
+        <div id='div_et1_5' class="collapse">  -->
+
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_5' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_5'>错误</button>
+        <div id='div_et1_5' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_5: &lt;src.gui.page.gb_login_page.GbLoginPage object at 0x02F86570&gt; 页面中未能找到 ('class name', 'siteHeader_userAccountLink') 元素
+Traceback (most recent call last):
+  File "E:\code\python\pyautotest\test_case\test_gb_login.py", line 31, in test_login5_action
+    GbLoginAction(self.driver).user_login_verify()
+  File "E:\code\python\pyautotest\src\gui\action\gb_login_action.py", line 25, in user_login_verify
+    return login_page.login_user_success()
+  File "E:\code\python\pyautotest\src\gui\page\gb_login_page.py", line 57, in login_user_success
+    username = self.find_element(*self.login_user_success_loc).text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
+    <tr id='et1_6' class='none'>
+        <td class='errorCase' style="vertical-align: middle"><div class='testcase'>test_login_scene</div></td>
+        <td style="vertical-align: middle"></td>
+        <td colspan='5' align='center'>
+        <!--默认收起错误信息 -Findyou
+        <button id='btn_et1_6' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_6'>错误</button>
+        <div id='div_et1_6' class="collapse">  -->
+
+        <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+        <button id='btn_et1_6' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_et1_6'>错误</button>
+        <div id='div_et1_6' class="collapse in">
+        <pre style="text-align:left">
+        
+et1_6: &lt;src.gui.page.gb_login_page.GbLoginPage object at 0x02F7C1D0&gt; 页面中未能找到 ('class name', 'siteHeader_userAccountLink') 元素
+Traceback (most recent call last):
+  File "E:\code\python\pyautotest\test_case\test_gb_login.py", line 35, in test_login_scene
+    GbLoginScene(self.driver).test_login()
+  File "E:\code\python\pyautotest\src\gui\scene\gb_login_scene.py", line 11, in test_login
+    gb_login_action.GbLoginAction(self.driver).do_login()
+  File "E:\code\python\pyautotest\src\gui\action\gb_login_action.py", line 31, in do_login
+    self.user_login_verify(username, password)
+  File "E:\code\python\pyautotest\src\gui\action\gb_login_action.py", line 25, in user_login_verify
+    return login_page.login_user_success()
+  File "E:\code\python\pyautotest\src\gui\page\gb_login_page.py", line 57, in login_user_success
+    username = self.find_element(*self.login_user_success_loc).text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+
+        </pre>
+        </div>
+        </td>
+        <td class='errorCase' style="vertical-align: middle"></td>
+    </tr>
+    
 <tr id='total_row' class="text-center active">
     <td colspan='2'>总计</td>
+    <td>6</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0秒</td>
-    <td>通过率：0.00 %</td>
+    <td>6</td>
+    <td>207.44秒</td>
+    <td>通过率：0.00%</td>
 </tr>
 </table>
 

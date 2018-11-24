@@ -233,7 +233,7 @@ table       { font-size: 100%; }
                 innerSize: '80%',
                 name: '比例',
                 data: [
-                    ['通过', 0],
+                    ['通过', 6],
                     {
                         name: '失败',
                         y: 0,
@@ -375,9 +375,9 @@ function html_escape(s) {
 <div style="width: 650px; float: left;">
     <h1 style="font-family: Microsoft YaHei">自动化测试报告</h1>
     <p class='attribute'><strong>测试人员 : </strong> caiwen</p>
-<p class='attribute'><strong>开始时间 : </strong> 2018-11-23 14:43:16</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 0，通过率 = 0.00 %</p>
+<p class='attribute'><strong>开始时间 : </strong> 2018-11-24 14:50:40</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:02:34.743000</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 6，通过 6，通过率 = 100.00%</p>
 <p class='attribute'><strong>失败用例合集 : </strong> <ol style='float: left;'>无</ol></p>
 <p class='attribute'><strong>错误用例合集 : </strong> <ol style='float: left;'>无</ol></p>
 
@@ -390,11 +390,11 @@ function html_escape(s) {
 
 <div style="width: 500px; clear: both;">
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00 % }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 0 }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 6 }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
 <a class="btn btn-warning" href='javascript:showCase(3)'>错误{ 0 }</a>
-<a class="btn btn-info" href='javascript:showCase(4)'>所有{ 0 }</a>
+<a class="btn btn-info" href='javascript:showCase(4)'>所有{ 6 }</a>
 </p>
 </div>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -419,14 +419,67 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
+<tr class='passClass warning'>
+    <td>GbLoginCase</td>
+    <td></td>
+    <td class="text-center">6</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">154.74秒</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',6)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_login3_action</div></td>
+    <td style="vertical-align: left"></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td class='passCase' style="vertical-align: middle"></td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_login4_action</div></td>
+    <td style="vertical-align: left"></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td class='passCase' style="vertical-align: middle"></td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_login5_action</div></td>
+    <td style="vertical-align: left"></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td class='passCase' style="vertical-align: middle"></td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_login_pwd_err_action</div></td>
+    <td style="vertical-align: left"></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td class='passCase' style="vertical-align: middle"></td>
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_login_scene</div></td>
+    <td style="vertical-align: left"></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td class='passCase' style="vertical-align: middle"></td>
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase' style="vertical-align: middle"><div class='testcase'>test_login_success_action</div></td>
+    <td style="vertical-align: left"></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+    <td class='passCase' style="vertical-align: middle"></td>
+</tr>
+
 <tr id='total_row' class="text-center active">
     <td colspan='2'>总计</td>
+    <td>6</td>
+    <td>6</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0秒</td>
-    <td>通过率：0.00 %</td>
+    <td>154.74秒</td>
+    <td>通过率：100.00%</td>
 </tr>
 </table>
 
