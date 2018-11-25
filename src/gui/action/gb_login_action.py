@@ -37,3 +37,7 @@ class GbLoginAction(BaseAction):
         if self.get_cookie_named('gb_userinfo') is None:
             return False
         return True
+
+    def asset_response_result(self, msg):
+        login_page = GbLoginPage(self.driver)
+        return login_page.login_response_err_hint() == msg

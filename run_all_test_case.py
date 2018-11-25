@@ -3,6 +3,7 @@ from src.util import html_report
 from src.util import driver
 import approot
 
+
 class RunAllTests(object):
 
     def __init__(self):

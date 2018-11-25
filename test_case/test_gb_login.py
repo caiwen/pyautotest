@@ -14,7 +14,10 @@ class GbLoginCase(BaseCase):
 
     # 测试密码错误
     def test_login_pwd_err_action(self):
-        GbLoginAction(self.driver).user_login_verify(username='caiwen@globalegrow.com', password='adminaaaa')
+        login_action = GbLoginAction(self.driver)
+        login_action.user_login_verify(username='caiwen@globalegrow.com', password='adminaaaa')
+        self.driver.switch_to_alert()
+        self.assertTrue(login_action.asset_response_result('Your email/password is incorrect. Please try again'))
 
     # 测试密码没填
     def test_login3_action(self):
