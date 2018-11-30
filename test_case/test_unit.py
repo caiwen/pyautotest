@@ -3,6 +3,7 @@ from src.gui.action.gb_login_action import GbLoginAction
 import unittest
 from src.util.decorator import *
 
+
 class GbLoginCase(BaseCase):
 
     # 测试密码错误
