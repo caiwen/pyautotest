@@ -1316,7 +1316,7 @@ class DirAndFiles(object):
         img_name = str(i) + ".png"
 
         browser_type = browser.capabilities["browserName"]
-        browser_version = browser.capabilities["version"]
+        browser_version = browser.capabilities["browserVersion"]
         browser_msg = browser_type + "(" + browser_version + ")"
 
         print("errorImg[" + img_name + "]errorImg, browser[" + browser_msg + "]browser")
