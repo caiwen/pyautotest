@@ -10,7 +10,6 @@ class GbLoginCase(BaseCase):
     # 测试正常登录动作
     @testcase
     def test_login_success_action(self):
-
         try:
             login_action = GbLoginAction(self.driver)
             login_action.do_login()
