@@ -1,6 +1,7 @@
 import logging
 import datetime
 import approot
+import os
 
 class MyLog:
     def __init__(self):
@@ -9,6 +10,9 @@ class MyLog:
         # 设置当次测试日志输出的文件夹与文件
         log_path = approot.get_root() + './log/'
         log_folder = log_path + now_time.strftime('%Y-%m-%d')
+        # 查询文件夹是否存在，不存在则创建文件
+        if not os.path.exists(log_folder):
+            os.makedirs(log_folder)
         log_file = now_time.strftime('%H%M%S') + '_debug'
         filename = log_folder + '/' + log_file + '.txt'
         self.set_logger(log_file, filename)

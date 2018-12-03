@@ -3,7 +3,7 @@ gearbest 的登录操作页面
 """
 from selenium.webdriver.common.by import By
 from src.gui.page.base_page import BasePage
-
+from src.util.decorator import *
 
 class GbLoginPage(BasePage):
 
@@ -29,20 +29,24 @@ class GbLoginPage(BasePage):
         self.driver.maximize_window()
 
     # 登录用户名
+    @teststep
     def login_username(self, username):
         self.find_element(*self.login_username_loc).clear()
         self.find_element(*self.login_username_loc).send_keys(username)
 
     # 登录密码
+    @teststep
     def login_password(self, password):
         self.find_element(*self.login_password_loc).clear()
         self.find_element(*self.login_password_loc).send_keys(password)
 
     # 登录按钮
+    @teststep
     def login_button(self):
         self.find_element(*self.login_button_loc).click()
 
     # 统一登录入口
+    @teststep
     def user_login(self, username="testuser01", password="testgood001"):
         # 获取用户名和页面登录
         self.open()
@@ -59,6 +63,7 @@ class GbLoginPage(BasePage):
         return self.find_element(self.login_response_err_loc).text
 
     # 登录成功用户名信息
+    @teststep
     def login_user_success(self):
         username = self.find_element(*self.login_user_success_loc).text
         username = username.strip('您好：')
