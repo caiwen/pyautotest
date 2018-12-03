@@ -12,7 +12,7 @@ class RunAllTests(object):
         self.description = "测试报告"
 
     def run(self):
-        test_suite = unittest.TestLoader().discover(self.test_case_path, "test_gb*.py")
+        test_suite = unittest.TestLoader().discover(self.test_case_path, "test_unit*.py")
         # 启动测试时创建文件夹并获取报告的名字
         daf = html_report.DirAndFiles()
         daf.create_dir(title=self.title)

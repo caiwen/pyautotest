@@ -3,10 +3,12 @@ GB 登录的相关操作
 """
 from .base_action import BaseAction
 from ..page.gb_login_page import GbLoginPage
+from src.util.decorator import *
 
 
 class GbLoginAction(BaseAction):
     # 测试用户登录
+    @teststeps
     def user_login_verify(self, username="", password=""):
         login_page = GbLoginPage(self.driver)
         # 打开登录页面
