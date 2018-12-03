@@ -3,7 +3,7 @@ from src.util import constants
 from src.util import driver
 import datetime
 import os
-
+import approot
 
 class Bootstrap:
     def __init__(self):
@@ -35,6 +35,8 @@ class Bootstrap:
         # html文件存放路径
         html_report_path = conf.get_config('system', 'html_report_path')
         constants.set_value('html_report_path', html_report_path)
+
+        excel_report_folder = approot.get_root() + excel_report_folder
 
         # 创建导出excel报告的文件夹
         if not os.path.exists(excel_report_folder):

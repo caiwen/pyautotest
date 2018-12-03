@@ -8,8 +8,6 @@ class BaseAction(object):
         def __init__(self, selenium_driver):
             self.demo_data = data.Data('', 'demo.xml')
             self.driver = selenium_driver
-            self.mscreenshot = screenshot.Screenshot()
-            self.mlog = log.Log()
 
         def delay_time(self, sec):
             time.sleep(sec)

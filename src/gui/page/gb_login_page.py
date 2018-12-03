@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from src.gui.page.base_page import BasePage
 from src.util.decorator import *
 
+
 class GbLoginPage(BasePage):
 
     # 登录用户名的定位
